@@ -10,10 +10,11 @@ body {
 
 #start {
     background-color:#bdc3c7;
-    width: 40%;
+    width: 30%;
     height: 50%;
     display: block;
     margin: auto;
+	border-radius: 18px;
 }
 
 #image{
@@ -27,12 +28,12 @@ body {
     background-color: #bdc3c7;
     margin-left: 37%;
     border-radius: 25px;
-;
 }
 
 #firstjoin {
     color: white;
     text-align: center;
+	font-size: large;
 }
 
 #firststart {
