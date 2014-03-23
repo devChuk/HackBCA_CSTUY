@@ -1,0 +1,71 @@
+body {
+    background-color: #34495e;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+#start {
+    background-color:#bdc3c7;
+    width: 40%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+#image{
+    display:block;
+    margin: auto;
+}
+
+#join {
+    line-height:3;
+    width:25%;
+    background-color: #bdc3c7;
+    margin-left: 37%;
+    border-radius: 25px;
+;
+}
+
+#firstjoin {
+    color: white;
+    text-align: center;
+}
+
+#firststart {
+    color: white;
+    text-align: center;
+}
+
+#btnspace {
+    height: 25%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.firstbox {
+    background-color:#bdc3c7;
+    width: 40%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+#roomname {
+    height:5px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    width: 95%;
+    display: block;
+    margin : 0 auto;
+    margin-bottom: 5%;
+}
