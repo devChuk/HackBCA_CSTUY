@@ -3,22 +3,22 @@ div {
     height: 300;
 }
 
-#publisher {
+#publisher-0 {
     position:absolute;
     top:0;
     left:0;
 }
-#subscriber-0 {
+#subscriber-1 {
     position:absolute;
     top:0;
     right:0;
 }
-#subscriber-1 {
+#subscriber-2 {
     position:absolute;
     bottom:0;
     left:0;
 }
-#subscriber-2 {
+#subscriber-3 {
     position:absolute;
     bottom:0;
     right:0;
