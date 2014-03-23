@@ -10,5 +10,20 @@
 <a href="start.html"><div id="start"><p id="firststart">Start</p></div></a>
 <div id="btnspace" style="height: 40px;"></div>
 <a href="join.html"><div id="join"><p id="firstjoin">Join</p></div></a>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>
+        $(document).ready(function() {
+            $("a").click(function(event){
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);      
+            });
+         
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+	</script>
+
 </body>
 </html>

@@ -10,29 +10,24 @@
 <body>
 
 <script type="text/javascript">
-    alert("aloha");
 
-    var numSubbscribers = 0;
+
+
 
     var apiKey = "44704452";
     var sessionId = "2_MX40NDcwNDQ1Mn5-U2F0IE1hciAyMiAyMjoyMTo1MSBQRFQgMjAxNH4wLjI1Mjc2fg";
     var token = "T1==cGFydG5lcl9pZD00NDcwNDQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1jNDdmMmQ2YWI1MzkwYjQzNzIyYTIyNWJlMWI3MTBlNDUyZjY5OTM4OnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDQwTkRjd05EUTFNbjUtVTJGMElFMWhjaUF5TWlBeU1qb3lNVG8xTVNCUVJGUWdNakF4Tkg0d0xqSTFNamMyZmcmY3JlYXRlX3RpbWU9MTM5NTU1MjEyMyZub25jZT0wLjk0MjMxNTkwMzg2NjgzMzYmZXhwaXJlX3RpbWU9MTM5ODE0MzkzNyZjb25uZWN0aW9uX2RhdGE9";
 
     function sessionConnectedHandler (event) {
-        console.log('im connected');
         session.publish( publisher );
         subscribeToStreams(event.streams);
     }
-
-
     function subscribeToStreams(streams) {
         for (var i = 0; i < streams.length; i++) {
             var stream = streams[i];
             if (stream.connection.connectionId
                     != session.connection.connectionId) {
-
-                session.subscribe(stream, "subscriber-"+numSubbscribers);
-                numSubscribers++;
+                session.subscribe(stream);
             }
         }
     }
@@ -40,7 +35,7 @@
         subscribeToStreams(event.streams);
     }
 
-    var publisher = TB.initPublisher(apiKey, "publisher");
+    var publisher = TB.initPublisher(apiKey);
     var session   = TB.initSession(sessionId);
 
     session.connect(apiKey, token);
@@ -49,23 +44,14 @@
 
     session.addEventListener("streamCreated",
             streamCreatedHandler);
-    $('document').ready(
-
-            function(){
-                var elem = document.getElementsByTagName("div")[0];
-                elem.style.width = "900px";
-            }
-    );
-
-
 
 
 </script>
 
 
-<div id="publisher"></div>
-<div id="subscriber-0"></div>
-<div id="subscriber-1"></div>
-<div id="subscriber-2"></div>
+<div id="publisher-0"></div>
+<div id="publisher-1"></div>
+<div id="publisher-2"></div>
+<div id="publisher-3"></div>
 </body>
 </html>
