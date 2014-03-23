@@ -29,6 +29,16 @@ div p {
 	opacity: 1;
 }
 
+#joinbutton {
+    background-color:#bdc3c7;
+    width: 32%;
+    height: 1.5em;
+    display: block;
+    color: white;
+    font-size: 18px;
+}
+
+
 #firstjoin {
     color: white;
     text-align: center;
