@@ -6,7 +6,9 @@ body {
     background-color:#bdc3c7;
     width: 40%;
     height: 50%;
-    margin-left: 30%;
+    display: block;
+    margin: auto;
+
 }
 
 #roomname {
