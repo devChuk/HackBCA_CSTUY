@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello(name=None):
-    page = render_template('tokbox.html', name=name)
+    page = render_template('drawingboardtest.html', name=name)
     return page
 
 if __name__ == "__main__":
