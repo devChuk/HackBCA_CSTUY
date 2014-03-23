@@ -1,0 +1,25 @@
+div {
+    width: 400;
+    height: 300;
+}
+
+#publisher {
+    position:absolute;
+    top:0;
+    left:0;
+}
+#subscriber-0 {
+    position:absolute;
+    top:0;
+    right:0;
+}
+#subscriber-1 {
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#subscriber-2 {
+    position:absolute;
+    bottom:0;
+    right:0;
+}

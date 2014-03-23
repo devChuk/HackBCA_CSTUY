@@ -3,25 +3,36 @@
 <head>
     <title></title>
     <script src="http://static.opentok.com/webrtc/v2.0/js/TB.min.js" ></script>
+    <link rel="stylesheet" href="workdammit.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-</head>
+        </head>
 <body>
 
 <script type="text/javascript">
+    alert("aloha");
+
+    var numSubbscribers = 0;
+
     var apiKey = "44704452";
     var sessionId = "2_MX40NDcwNDQ1Mn5-U2F0IE1hciAyMiAxOTo1OTo1NCBQRFQgMjAxNH4wLjcyMzMzNH4";
     var token = "T1==cGFydG5lcl9pZD00NDcwNDQ1MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1kZTBiMmQ2MzEzYzkxMWRlN2ZiOTY2Y2M1YmNiOWJmMzA4NjlhYWIzOnJvbGU9bW9kZXJhdG9yJnNlc3Npb25faWQ9Ml9NWDQwTkRjd05EUTFNbjUtVTJGMElFMWhjaUF5TWlBeE9UbzFPVG8xTkNCUVJGUWdNakF4Tkg0d0xqY3lNek16Tkg0JmNyZWF0ZV90aW1lPTEzOTU1NDM2NTgmbm9uY2U9MC4xMjU3OTgwNjgzODE3OTYzJmV4cGlyZV90aW1lPTEzOTgxMzU1NTQmY29ubmVjdGlvbl9kYXRhPQ==";
 
     function sessionConnectedHandler (event) {
+        console.log('im connected');
         session.publish( publisher );
         subscribeToStreams(event.streams);
     }
+
+
     function subscribeToStreams(streams) {
         for (var i = 0; i < streams.length; i++) {
             var stream = streams[i];
             if (stream.connection.connectionId
                     != session.connection.connectionId) {
-                session.subscribe(stream);
+
+                session.subscribe(stream, "subscriber-"+numSubbscribers);
+                numSubscribers++;
             }
         }
     }
@@ -29,7 +40,7 @@
         subscribeToStreams(event.streams);
     }
 
-    var publisher = TB.initPublisher(apiKey);
+    var publisher = TB.initPublisher(apiKey, "publisher");
     var session   = TB.initSession(sessionId);
 
     session.connect(apiKey, token);
@@ -38,6 +49,23 @@
 
     session.addEventListener("streamCreated",
             streamCreatedHandler);
+    $('document').ready(
+
+            function(){
+                var elem = document.getElementsByTagName("div")[0];
+                elem.style.width = "900px";
+            }
+    );
+
+
+
+
 </script>
+
+
+<div id="publisher"></div>
+<div id="subscriber-0"></div>
+<div id="subscriber-1"></div>
+<div id="subscriber-2"></div>
 </body>
 </html>
