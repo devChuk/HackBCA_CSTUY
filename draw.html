@@ -142,43 +142,56 @@
 
 
 var pictures = [
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/christmasTree_zps7b974d5f.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/christmasTree_zps7b974d5f.png" border="0" alt=" photo christmasTree_zps7b974d5f.png"/></a>',
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/christmasTreewords_zps439f3276.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/christmasTreewords_zps439f3276.png" border="0" alt=" photo christmasTreewords_zps439f3276.png"/></a>',
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/hohoho_zps9223f353.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/hohoho_zps9223f353.png" border="0" alt=" photo hohoho_zps9223f353.png"/></a>',
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/wavespic_zps3a562727.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/wavespic_zps3a562727.png" border="0" alt=" photo wavespic_zps3a562727.png"/></a>',
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/grassword_zps50aafd48.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/grassword_zps50aafd48.png" border="0" alt=" photo grassword_zps50aafd48.png"/></a>',
-'<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/grassypic_zps00ef7caf.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/grassypic_zps00ef7caf.png" border="0" alt=" photo grassypic_zps00ef7caf.png"/></a>'
-];
+'<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/christmasTree_zps7b974d5f.png" border="0" alt=" photo christmasTree_zps7b974d5f.png"/>','<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/christmasTreewords_zps439f3276.png" border="0" alt=" photo christmasTreewords_zps439f3276.png"/>','<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/hohoho_zps9223f353.png" border="0" alt=" photo hohoho_zps9223f353.png"/>','<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/wavespic_zps3a562727.png" border="0" alt=" photo wavespic_zps3a562727.png"/>','<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/grassword_zps50aafd48.png" border="0" alt=" photo grassword_zps50aafd48.png"/>','<img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/grassypic_zps00ef7caf.png" border="0" alt=" photo grassypic_zps00ef7caf.png"/>'];
 
-/*
+
 var i =0;
 function submit(){
-	$('#insert').empty();
+	$('#insert').remove();
 
-	if(i >= 6){
+	if(i < 3){
+		console.log(i);
+		console.log(pictures[i]);
+		$('#thing').append('<div id="insert">' +pictures[i]+'</div>');
+		$('#insert').css('display', 'block');
+		$('#insert').css('margin', 'auto');
+		i++;
+	}
+	else if(i ==3){
+		console.log(i);
+		$('#thing').append('<div id="insert">' +pictures[i-3]+pictures[i-2]+pictures[i-1]+'</div>');
+		$('#insert').css('display', 'block');
+		$('#insert').css('margin', 'auto');
+		i++;
+	}
+	else if(i ==4){
+		console.log(i);
+		i++;
+	}
+	else if(i >4 && i < 8){
+		console.log(i);
+		console.log(pictures[i-2]);
+		$('#thing').append('<div id="insert">' +pictures[i-2]+'</div>');
+		$('#insert').css('display', 'block');
+		$('#insert').css('margin', 'auto');
+		i++;
+	}
+	else if(i == 8){
+		console.log(i);
+		$('#thing').append('<div id="insert">' +pictures[i-5]+pictures[i-4]+pictures[i-3]+'</div>');
+		$('#insert').css('display', 'block');
+		$('#insert').css('margin', 'auto');
+		i++;
+	}
+	else{
+		console.log(i);
 		i = 0;
 	}
-
-
-	$('a').css('display', 'none');
-
-	console.log(pictures[i]);
-	$('#thing').append('<div id="insert">' +pictures[i]+'</div>');
-	i++;
-
 }
 
-$('.submit').on('click', submit());
+$('.submit').on('click', submit);
 
-*/
 
-        var num = Math.floor( Math.random() * pictures.length );
-        var num2=pictures(num);
-        $("document").ready(function(){
-                    $("num2").insertAfter("#thing");
-                }
-
-        );
 </script>
 
 </body>
