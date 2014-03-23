@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Dat Game Page</title>
     <script src="canvasandtokbox.js"></script>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="css/website.css">
+	<link rel="stylesheet" href="css/drawingboard.css">
+
+	<style>
+		/*
+		* drawingboards styles: set the board dimensions you want with CSS
+		*/
+		.board {
+			margin: 0 auto;
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+
+
+	<style data-example="1">
+		#default-board {
+			width: 700px;
+			height: 400px;
+		}
+	</style>
 
 </head>
 <body>
 <div id="myPublisherDiv"></div>
+
+	<div class="example" data-example="1">
+		<h1>The default DrawingBoard</h1>
+		<div class="board" id="default-board"></div>
+	</div>
+
+	<!-- jquery is required - zepto might do the trick too -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- in a production environment, just include the minified script. It contains the board and the default controls (size, nav, colors, download): -->
+	<!--<script src="../dist/drawingboard.min.js"></script>-->
+
+	<script src="js/utils.js"></script>
+	<script src="js/board.js"></script>
+	<script src="js/controls/control.js"></script>
+	<script src="js/controls/color.js"></script>
+	<script src="js/controls/drawingmode.js"></script>
+	<script src="js/controls/navigation.js"></script>
+	<script src="js/controls/size.js"></script>
+	<script src="js/controls/download.js"></script>
+
+	<script data-example="1">
+		//create the drawingboard by passing it the #id of the wanted container
+		var defaultBoard = new DrawingBoard.Board('default-board');
+	</script>
+
+	<!-- totally not drawingboard-related code -->
+	<!--<script src="js/prism.js"></script>
+	<script src="js/script.js"></script> -->
 </body>
 </html>
