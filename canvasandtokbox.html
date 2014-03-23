@@ -30,8 +30,13 @@
 		}
 
 		#displayPNG {
-			width: 692px;
-			height: 355px;
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: 900px; /*692 355       */
+			height: 400px;
 		}
 	</style>
 
@@ -46,6 +51,7 @@
 	</div>
 	<div>
 		<input type = "button" value="test" onclick="displayImage();"/>
+		<br>
 		<canvas id = "displayPNG" width = "700" height = "300"></canvas>
 	</div>
 
@@ -77,7 +83,7 @@
 				
 				pic.src = defaultBoard.getImg();
 				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
-				ctx.scale(3,3);
+				ctx.scale(6,6);
 				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
 			}
 			//console.log(pic);
