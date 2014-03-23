@@ -16,6 +16,10 @@ body {
     text-align: center;
 }
 
+.OT_video.container {
+	border-radius: 25px;
+}
+
 input {
     width: 95%;
     display: block;
