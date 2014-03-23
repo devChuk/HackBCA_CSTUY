@@ -43,3 +43,23 @@ body {
 a {
     text-decoration: none;
 }
+
+.firstbox {
+    background-color:#bdc3c7;
+    width: 40%;
+    height: 50%;
+    margin-left: 25%;
+}
+
+.roomname {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+input {
+    width: 95%;
+    display: block;
+    margin : 0 auto;
+    margin-bottom: 5%;
+}
