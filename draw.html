@@ -150,7 +150,7 @@ var pictures = [
 '<a href="http://s1292.photobucket.com/user/Timotius_Sitorus/media/grassypic_zps00ef7caf.png.html" target="_blank"><img src="http://i1292.photobucket.com/albums/b561/Timotius_Sitorus/grassypic_zps00ef7caf.png" border="0" alt=" photo grassypic_zps00ef7caf.png"/></a>'
 ];
 
-
+/*
 var i =0;
 function submit(){
 	$('#insert').empty();
@@ -169,6 +169,16 @@ function submit(){
 }
 
 $('.submit').on('click', submit());
+
+*/
+
+        var num = Math.floor( Math.random() * pictures.length );
+        var num2=pictures(num);
+        $("document").ready(function(){
+                    $("num2").insertAfter("#thing");
+                }
+
+        );
 </script>
 
 </body>
