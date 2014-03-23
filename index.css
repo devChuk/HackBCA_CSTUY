@@ -76,6 +76,8 @@ a {
 }
 
 .roomname {
+  
+    padding-top: 10px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -90,8 +92,10 @@ input {
 }
 
 #headerbro {
+    display: block;
+    margin: auto;
     height: 25%;
     background-color: #ecf0f1;
-    width: 100%;
+    width: 75%;
     margin-top: 0;
 }
