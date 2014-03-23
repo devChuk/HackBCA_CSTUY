@@ -9,12 +9,17 @@ body {
 }
 
 a div{
-    height: 20%;
+    line-height: 260%;
     width:25%;
     background-color: #bdc3c7;
     margin-left:37%;
     border-radius: 25px;
 	opacity: 0.89;
+}
+
+#logo{
+    display: block;
+    margin: auto;
 }
 
 div p {
