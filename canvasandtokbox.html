@@ -70,14 +70,12 @@
 		function displayImage()
 		{
 			var canvas = document.getElementById("displayPNG");
-			var a = $("#drawing-board-canvas");
-
 			var ctx = canvas.getContext("2d");
-			var canvas = $("#drawing-board-canvas");
-
 			var pic = new Image();
-			pic.src = defaultBoard.getImg();
+
 			pic.onload = function() {
+				
+				pic.src = defaultBoard.getImg();
 				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
 				ctx.scale(3,3);
 				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
