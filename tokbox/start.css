@@ -1,0 +1,37 @@
+body {
+    background-color: #34495e;
+}
+
+#start {
+    background-color:#bdc3c7;
+    width: 40%;
+    height: 50%;
+    display: block;
+    margin: auto;
+
+}
+
+#roomname {
+    color: white;
+    text-align: center;
+}
+
+input {
+    width: 95%;
+    display: block;
+    margin : 0 auto;
+    margin-bottom: 5%;
+}
+
+#heading {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 95%;
+    display: block;
+    margin : 0 auto;
+    margin-bottom: 5%;
+}
