@@ -8,15 +8,17 @@ body {
     height: 40%;
     display: block;
     margin: auto;
+	border-radius: 15px;
 }
 
 #startbutton {
     background-color:#bdc3c7;
     width: 15%;
-    height: 40%;
+    height: 1.5em;
     display: block;
     margin-top: 2em;
-
+	color: white;
+	font-size: 18px;
 }
 
 #roomname {
@@ -35,11 +37,4 @@ input {
     font-size: 50px;
     text-align: center;
     color: white;
-}
-
-input {
-    width: 95%;
-    display: block;
-    margin : 0 auto;
-    margin-bottom: 5%;
 }

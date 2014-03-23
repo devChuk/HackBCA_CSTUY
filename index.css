@@ -14,6 +14,14 @@ a div{
     background-color: #bdc3c7;
     margin-left:37%;
     border-radius: 25px;
+	opacity: 0.89;
+}
+
+div p {
+	font-size: 150%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	opacity: 1;
 }
 
 #firstjoin {
@@ -40,6 +48,7 @@ a {
     height: 50%;
     display: block;
     margin: auto;
+	border-radius: 20px;
 }
 
 .nextPage {
@@ -48,6 +57,7 @@ a {
     background-color: #bdc3c7;
 	margin-top: 15px;
     border-radius: 25px;
+	color: white;
 }
 
 .roomname {
