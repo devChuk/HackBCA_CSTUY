@@ -1,24 +1,24 @@
-div {
-    width: 400;
-    height: 300;
+.blah {
+    width: 10px;
+    height: 10px;
 }
 
-#publisher-0 {
+#publisher {
     position:absolute;
     top:0;
     left:0;
 }
-#subscriber-1 {
+#subscriber-0 {
     position:absolute;
     top:0;
     right:0;
 }
-#subscriber-2 {
+#subscriber-1 {
     position:absolute;
     bottom:0;
     left:0;
 }
-#subscriber-3 {
+#subscriber-2 {
     position:absolute;
     bottom:0;
     right:0;
