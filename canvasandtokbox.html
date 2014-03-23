@@ -23,21 +23,30 @@
 		}
 	</style>
 
-
 	<style data-example="1">
 		#default-board {
 			width: 700px;
 			height: 400px;
 		}
+
+		#displayPNG {
+			width: 692px;
+			height: 355px;
+		}
 	</style>
 
 </head>
 <body>
-<div id="myPublisherDiv"></div>
+
+	<div id="myPublisherDiv"></div>
 
 	<div class="example" data-example="1">
 		<h1>The default DrawingBoard</h1>
 		<div class="board" id="default-board"></div>
+	</div>
+	<div>
+		<input type = "button" value="test" onclick="displayImage();"/>
+		<canvas id = "displayPNG" width = "700" height = "300"></canvas>
 	</div>
 
 	<!-- jquery is required - zepto might do the trick too -->
@@ -55,9 +64,28 @@
 	<script src="js/controls/size.js"></script>
 	<script src="js/controls/download.js"></script>
 
-	<script data-example="1">
-		//create the drawingboard by passing it the #id of the wanted container
+	<script>
 		var defaultBoard = new DrawingBoard.Board('default-board');
+
+		function displayImage()
+		{
+			var canvas = document.getElementById("displayPNG");
+			var a = $("#drawing-board-canvas");
+
+			var ctx = canvas.getContext("2d");
+			var canvas = $("#drawing-board-canvas");
+
+			var pic = new Image();
+			pic.src = defaultBoard.getImg();
+			pic.onload = function() {
+				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
+				ctx.scale(3,3);
+				ctx.drawImage(pic, 0, 0, 100, 100*pic.height/pic.width);
+			}
+			//console.log(pic);
+			//$("#displayPNG").show();	
+		}
+
 	</script>
 
 	<!-- totally not drawingboard-related code -->
