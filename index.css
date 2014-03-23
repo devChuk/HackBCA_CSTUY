@@ -88,3 +88,10 @@ input {
     margin : 0 auto;
     margin-bottom: 5%;
 }
+
+#headerbro {
+    height: 25%;
+    background-color: #ecf0f1;
+    width: 100%;
+    margin-top: 0;
+}
